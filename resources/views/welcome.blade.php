@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet" />
+  
   <script src="https://kit.fontawesome.com/b78a6629d7.js" crossorigin="anonymous"></script>
   <style>
     * {
@@ -40,6 +41,11 @@
 
     .text-primary {
       color: #FD6E0A;
+    }
+    .A{
+      margin: 30px;
+      padding: 20px;
+      border-radius: 25px;
     }
 
     nav ul {
@@ -257,8 +263,11 @@
         <p class="banner-description">A software engineer designs, develops, and maintains software systems and applications. They use programming languages to write efficient, reliable code. Software engineers solve complex problems through logical thinking and technical skills. They often collaborate with teams to build scalable and user-friendly solutions. Their work spans across web, mobile, desktop, and embedded systems.</p>
         <button class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</button>
         <button class="btn-primary"><i class="fa-solid fa-phone"></i> Contact</button>
+      </div >
+      <div class="A">
+      <img class="profile-pic" src="{{asset('assets/IMG_2421.JPG')}}" alt="Profile Picture" />
       </div>
-      <img class="profile-pic" src="images/hardy.png" alt="Profile Picture" />
+      
     </div>
   </header>
 
@@ -312,7 +321,7 @@
           <h4 class="resume-column-title">Education</h4>
           <div class="resume-item">
             <h5 class="resume-item-title">BSc in CSE</h5>
-            <p class="resume-item-institute">XYZ University / 2010 - 2014</p>
+            <p class="resume-item-institute">Daffodil International University (2022-2025)</p>
             <p class="resume-item-description">Major in software engineering and web development.</p>
           </div>
         </div>
@@ -320,7 +329,7 @@
           <h4 class="resume-column-title">Experience</h4>
           <div class="resume-item">
             <h5 class="resume-item-title">Senior Web Developer</h5>
-            <p class="resume-item-institute">ABC Tech / 2017 - Present</p>
+            <p class="resume-item-institute">Codex / 2024 - Present</p>
             <p class="resume-item-description">Led front-end projects with React and backend APIs.</p>
           </div>
         </div>
