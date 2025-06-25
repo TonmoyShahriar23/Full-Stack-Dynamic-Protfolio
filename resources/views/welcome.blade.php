@@ -254,7 +254,7 @@
       <div class="banner-content">
         <h3>Hi, I am</h3>
         <h1 class="banner-title">Mostaque Shahriar Tonmoy</h1>
-        <p class="banner-description">Friendly as an betrayed formerly he. Morning because as to society behaved moments.</p>
+        <p class="banner-description">A software engineer designs, develops, and maintains software systems and applications. They use programming languages to write efficient, reliable code. Software engineers solve complex problems through logical thinking and technical skills. They often collaborate with teams to build scalable and user-friendly solutions. Their work spans across web, mobile, desktop, and embedded systems.</p>
         <button class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</button>
         <button class="btn-primary"><i class="fa-solid fa-phone"></i> Contact</button>
       </div>
@@ -271,8 +271,8 @@
       <div class="about-info-container">
         <div class="about-info"><h4>Name</h4><p>Mostaque Shahriar Tonmoy</p></div>
         <div class="about-info"><h4>Email</h4><p>info@gmail.com</p></div>
-        <div class="about-info"><h4>Date of Birth</h4><p>11 November 1987</p></div>
-        <div class="about-info"><h4>From</h4><p>Los Angeles, USA</p></div>
+        <div class="about-info"><h4>Date of Birth</h4><p>3rd Frebruary,2000</p></div>
+        <div class="about-info"><h4>From</h4><p>Rangpur , Bangladesh</p></div>
       </div>
     </section>
 
