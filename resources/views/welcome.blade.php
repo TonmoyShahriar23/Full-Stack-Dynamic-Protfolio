@@ -285,7 +285,7 @@ textarea {
             <div class="about-info-container">
                 <div class="about-info">
                     <h4 class="info-title">Name</h4>
-                    <p class="info-descrption">Mostaque Shahriar Tonmoy</p>
+                    <p class="info-descrption">Mary Hardy </p>
                 </div>
                 <div class="about-info">
                     <h4 class="info-title">Email:</h4>
@@ -294,11 +294,11 @@ textarea {
                 </div>
                 <div class="about-info">
                     <h4 class="info-title">Date of birth:</h4>
-                    <p class="info-descrption">3rd February , 2000 </p>
+                    <p class="info-descrption">11 novembor 1987</p>
                 </div>
                 <div class="about-info">
                     <h4 class="info-title">From:</h4>
-                    <p class="info-descrption"> Rangpur, Bangladesh</p>
+                    <p class="info-descrption"> Los Angeles, USA</p>
                 </div>
 
 
