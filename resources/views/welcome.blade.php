@@ -11,6 +11,107 @@
     <link rel="stylesheet" href="styles/porttfolio.css" class="css">
     <script src="https://kit.fontawesome.com/b78a6629d7.js" crossorigin="anonymous"></script>
     <style>
+        /* Responsive styles */
+@media screen and (max-width: 1200px) {
+    nav {
+        margin: 0 100px;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .banner .profile-pic {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .skills-container,
+    .resume-container,
+    .about-info-container,
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 30px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .about {
+        padding: 50px 30px;
+    }
+
+    #what-i-do-description {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .nav-title {
+        font-size: 35px;
+    }
+
+    .banner-title {
+        font-size: 45px;
+    }
+
+    .banner-greeting {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-description {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 14px 24px;
+    }
+
+    .resume-item-title {
+        font-size: 20px;
+    }
+
+    .resume-item-institute {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 50px 20px;
+    }
+
+    .contact input[type="text"],
+    .contact input[type="email"],
+    textarea {
+        padding: 14px 20px;
+    }
+}
+
+
         body {
     font-family: 'Lato', sans-serif;
     font-family: 'Open Sans', sans-serif;
