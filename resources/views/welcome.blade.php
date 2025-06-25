@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Developer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,800;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/b78a6629d7.js" crossorigin="anonymous"></script>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
       font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: #181818;
     }
 
     nav {
@@ -25,116 +26,114 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 10%;
-    }
-
-    nav > ul {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #474747;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     .nav-title {
-      font-size: 45px;
+      font-size: 36px;
       font-weight: 800;
-      color: #181818;
     }
 
     .text-primary {
       color: #FD6E0A;
     }
 
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 30px;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: #474747;
+      font-weight: 600;
+    }
+
     .btn-primary {
-      border: none;
-      border-radius: 5px;
       background: #FD6E0A;
       color: white;
-      font-size: 16px;
-      font-weight: 600;
-      padding: 12px 25px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
     }
 
-    .header {
-      background-color: #FFF8F3;
+    header.header {
+      background: #FFF8F3;
       background-image: url('images/header_bg.png'), url('images/developer.png');
       background-repeat: no-repeat;
       background-position: bottom right, top left;
+      padding: 60px 10%;
     }
 
     .banner {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      padding: 50px 10%;
     }
 
     .banner-content {
       max-width: 600px;
     }
 
-    .banner-greeting {
-      font-size: 28px;
-      color: #474747;
-    }
-
     .banner-title {
-      font-size: 60px;
-      font-weight: 700;
-      margin: 10px 0 20px;
+      font-size: 50px;
+      margin: 15px 0;
     }
 
     .banner-description {
       margin-bottom: 20px;
-      color: #757575;
+      color: #555;
     }
 
     .profile-pic {
-      width: 300px;
+      max-width: 100%;
+      height: auto;
     }
 
     main {
-      max-width: 1140px;
-      margin: auto;
-      padding: 20px;
+      padding: 60px 10%;
     }
 
     .section-title {
       text-align: center;
       font-size: 32px;
-      font-weight: 700;
-      color: #181818;
       margin-bottom: 20px;
+      color: #181818;
     }
 
     .section-description {
       text-align: center;
-      font-size: 18px;
       color: #757575;
       margin-bottom: 40px;
     }
 
     .about {
-      background-color: #FFF8F3;
-      border-radius: 10px;
+      background: #FFF8F3;
       padding: 50px;
-      margin: 50px 0;
+      border-radius: 10px;
+      margin-bottom: 60px;
     }
 
     .about-info-container {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
-      gap: 20px;
+      justify-content: space-around;
+      gap: 30px;
     }
 
     .about-info {
-      flex: 1 1 200px;
       text-align: center;
+      flex: 1 1 200px;
     }
 
     .skills-container {
@@ -145,11 +144,11 @@
     }
 
     .skill {
-      flex: 1 1 250px;
-      background: white;
+      flex: 1 1 220px;
+      background: #fff;
       padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05);
       text-align: center;
     }
 
@@ -157,17 +156,11 @@
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
+      margin-top: 40px;
     }
 
     .resume-column {
-      flex: 1 1 100%;
-    }
-
-    .resume-column-title {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #474747;
+      flex: 1 1 400px;
     }
 
     .resume-item {
@@ -176,32 +169,36 @@
 
     .resume-item-title {
       font-size: 20px;
-      font-weight: 700;
-      color: #474747;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
 
-    .resume-item-institute,
-    .resume-item-description {
+    .resume-item-institute {
+      font-style: italic;
       color: #757575;
-      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    .resume-item-description {
+      color: #555;
     }
 
     .download-cv {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     footer {
-      background-color: #FFF8F3;
+      background: #FFF8F3;
       display: flex;
       flex-wrap: wrap;
-      gap: 40px;
+      justify-content: space-between;
       padding: 60px 10%;
-      margin-top: 60px;
+      gap: 30px;
     }
 
     .footer-column {
-      flex: 1 1 300px;
+      flex: 1 1 400px;
     }
 
     .social-links a {
@@ -213,156 +210,119 @@
       width: 100%;
       padding: 12px;
       margin-bottom: 15px;
-      border-radius: 5px;
-      border: none;
-      background: #fff;
-      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 6px;
     }
 
-    /* Responsive Styles */
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
       nav {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
+        gap: 10px;
       }
 
       .banner {
         flex-direction: column;
-        padding: 30px;
         text-align: center;
       }
 
-      .profile-pic {
-        width: 80%;
-        margin-top: 20px;
-      }
-
-      .banner-title {
-        font-size: 36px;
-      }
-
-      .section-title {
-        font-size: 26px;
-      }
-
-      .skills-container,
-      .about-info-container,
       .resume-container,
+      .about-info-container {
+        flex-direction: column;
+      }
+
       footer {
         flex-direction: column;
-        align-items: center;
-      }
-
-      .footer-column {
-        width: 100%;
       }
     }
   </style>
 </head>
-
 <body>
-  <!-- HEADER -->
+
   <header class="header">
     <nav>
       <h3 class="nav-title">To<span class="text-primary">nm</span>oy</h3>
       <ul>
-        <li><a href="">Portfolio</a></li>
-        <li><a href="">Blog</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><button class="btn-primary">Hire Me</button></li>
       </ul>
     </nav>
 
     <div class="banner">
       <div class="banner-content">
-        <h3 class="banner-greeting">Hi, I am</h3>
+        <h3>Hi, I am</h3>
         <h1 class="banner-title">Mostaque Shahriar Tonmoy</h1>
-        <p class="banner-description">Shot what able cold new see hold. Friendly as an betrayed formerly he. Morning because as to society behaved moments.</p>
+        <p class="banner-description">Friendly as an betrayed formerly he. Morning because as to society behaved moments.</p>
         <button class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</button>
-        <button class="btn-primary"> <i class="fa-solid fa-phone"></i> Contact</button>
+        <button class="btn-primary"><i class="fa-solid fa-phone"></i> Contact</button>
       </div>
-      <img class="profile-pic" src="images/hardy.png" alt="Profile picture" />
+      <img class="profile-pic" src="images/hardy.png" alt="Profile Picture" />
     </div>
   </header>
 
-  <!-- MAIN -->
   <main>
-    <section class="about">
+    <section id="about" class="about">
       <h3 class="section-title">About Me</h3>
-      <p class="section-description">I'm a designer & developer with a passion for web design. I enjoy building clean and slick websites that provide real value. Thousands of clients have gotten great results with me.</p>
+      <p class="section-description">
+        I'm a designer & developer with a passion for clean web design. I develop simple, slick websites that provide real value.
+      </p>
       <div class="about-info-container">
-        <div class="about-info">
-          <h4>Name</h4>
-          <p>Mary Hardy</p>
-        </div>
-        <div class="about-info">
-          <h4>Email</h4>
-          <p>info@gmail.com</p>
-        </div>
-        <div class="about-info">
-          <h4>Date of Birth</h4>
-          <p>11 November 1987</p>
-        </div>
-        <div class="about-info">
-          <h4>From</h4>
-          <p>Los Angeles, USA</p>
-        </div>
+        <div class="about-info"><h4>Name</h4><p>Mostaque Shahriar Tonmoy</p></div>
+        <div class="about-info"><h4>Email</h4><p>info@gmail.com</p></div>
+        <div class="about-info"><h4>Date of Birth</h4><p>11 November 1987</p></div>
+        <div class="about-info"><h4>From</h4><p>Los Angeles, USA</p></div>
       </div>
     </section>
 
-    <section>
+    <section id="skills">
       <h3 class="section-title">What I Do</h3>
-      <p class="section-description">I have more than 10 years of experience building software for clients all over the world. Below is a quick overview of my main technical skills.</p>
+      <p class="section-description">
+        I have 10+ years of experience building software. Here's a summary of my core skills:
+      </p>
       <div class="skills-container">
         <div class="skill">
-          <img src="images/icons/js.png" alt="">
-          <h3>JavaScript</h3>
-          <p>Experienced in ES6, DOM manipulation, and building interactive UIs.</p>
+          <img src="images/icons/js.png" alt="JS" />
+          <h4>JavaScript</h4>
+          <p>Experience in building interactive web apps using vanilla JS.</p>
         </div>
         <div class="skill">
-          <img src="images/icons/react.png" alt="">
-          <h3>React</h3>
-          <p>Skilled in building SPAs, hooks, component-based architecture.</p>
+          <img src="images/icons/react.png" alt="React" />
+          <h4>React</h4>
+          <p>Building SPAs using React and component-based structure.</p>
         </div>
         <div class="skill">
-          <img src="images/icons/nodejs.png" alt="">
-          <h3>Node.js</h3>
-          <p>Built RESTful APIs and real-time apps using Express.js and Socket.io.</p>
+          <img src="images/icons/nodejs.png" alt="Node" />
+          <h4>Node.js</h4>
+          <p>Backend development with Node.js, Express, and REST APIs.</p>
         </div>
         <div class="skill">
-          <img src="images/icons/mongo.png" alt="">
-          <h3>MongoDB</h3>
-          <p>Experienced in NoSQL schema design, queries, and aggregation.</p>
+          <img src="images/icons/mongo.png" alt="MongoDB" />
+          <h4>MongoDB</h4>
+          <p>NoSQL database development and integration with Node.js.</p>
         </div>
       </div>
     </section>
 
-    <section>
-      <h3 class="section-title">A Summary of My Resume</h3>
+    <section id="resume">
+      <h3 class="section-title">My Resume</h3>
       <div class="resume-container">
         <div class="resume-column">
-          <h3 class="resume-column-title">Education</h3>
+          <h4 class="resume-column-title">Education</h4>
           <div class="resume-item">
-            <h2 class="resume-item-title">B.Sc in Computer Engineering</h2>
-            <h3 class="resume-item-institute">XYZ University / 2012 - 2016</h3>
-            <p class="resume-item-description">Learned data structures, algorithms, and full-stack development.</p>
+            <h5 class="resume-item-title">BSc in CSE</h5>
+            <p class="resume-item-institute">XYZ University / 2010 - 2014</p>
+            <p class="resume-item-description">Major in software engineering and web development.</p>
           </div>
-          <!-- Add more education blocks as needed -->
         </div>
         <div class="resume-column">
-          <h3 class="resume-column-title">Experience</h3>
+          <h4 class="resume-column-title">Experience</h4>
           <div class="resume-item">
-            <h2 class="resume-item-title">Software Developer</h2>
-            <h3 class="resume-item-institute">Tech Corp / 2017 - Present</h3>
-            <p class="resume-item-description">Worked on scalable web apps, collaborated with cross-functional teams.</p>
+            <h5 class="resume-item-title">Senior Web Developer</h5>
+            <p class="resume-item-institute">ABC Tech / 2017 - Present</p>
+            <p class="resume-item-description">Led front-end projects with React and backend APIs.</p>
           </div>
-          <!-- Add more experience blocks as needed -->
         </div>
       </div>
       <div class="download-cv">
@@ -371,27 +331,25 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
+  <footer id="contact">
     <div class="footer-column">
-      <h3 class="section-title">Let's Connect</h3>
-      <p class="section-description">Fill out the form or call between 9:00 AM and 8:00 PM ET, Monday through Friday.</p>
+      <h3 class="section-title">Let’s Connect</h3>
+      <p class="section-description">Reach me through the form or social media.</p>
       <div class="social-links">
-        <a href="#"><img src="images/icons/facebook.png" alt=""></a>
-        <a href="#"><img src="images/icons/twitter.png" alt=""></a>
-        <a href="#"><img src="images/icons/insta.png" alt=""></a>
+        <a href="#"><img src="images/icons/facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="images/icons/twitter.png" alt="Twitter" /></a>
+        <a href="#"><img src="images/icons/insta.png" alt="Instagram" /></a>
       </div>
     </div>
     <div class="footer-column">
       <h3 class="section-title">Message Me</h3>
       <form class="contact">
-        <input type="text" placeholder="Your name">
-        <input type="email" placeholder="Your email">
-        <textarea rows="5" placeholder="Your message"></textarea>
-        <input class="btn-primary" type="submit" value="Submit">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Submit" class="btn-primary" />
       </form>
     </div>
   </footer>
 </body>
-
 </html>
